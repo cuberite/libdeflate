@@ -106,7 +106,7 @@
      *   - gcc: hardware floating point support
      *   - clang: NEON support (but not necessarily crypto support)
      */
-#    if (GCC_PREREQ(6, 1) && defined(__ARM_FP)) || \
+#    if (GCC_PREREQ(6, 1) && defined(__ARM_NEON)) || \
         (defined(__clang__) && defined(__ARM_NEON))
 #      define COMPILER_SUPPORTS_NEON_TARGET_INTRINSICS 1
        /*
